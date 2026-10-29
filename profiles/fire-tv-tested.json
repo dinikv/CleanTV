@@ -1,0 +1,22 @@
+{
+  "id": "fire-tv-tested",
+  "tested": [{"model": "AFTKRT", "build": "RS8185.3891N"}],
+  "groups": {
+    "diagnostics": {
+      "impact": "Reduces specific metrics and diagnostic collectors. Does not block all telemetry.",
+      "packages": ["com.amazon.perfcollection", "com.amazon.wirelessmetrics.service", "com.amazon.device.telemetry.emitter", "com.amazon.neo.minerva.logcat"]
+    },
+    "promotions": {
+      "impact": "Removes shopping, promotional, tutorial and release-note components; corresponding features may stop working.",
+      "packages": ["com.amazon.shoptv.firetv.client", "com.amazon.shoptv.client", "com.amazon.gamehub", "com.amazon.storm.lightning.tutorial", "com.amazon.tmm.tutorial", "com.amazon.tv.releasenotes", "com.amazon.kso.blackbird", "com.amazon.sneakpeek", "com.amazon.tv.easyupgrade"]
+    },
+    "recognition": {
+      "impact": "Disables identified content-recognition and advertising-ID components. Some personalization may stop working.",
+      "packages": ["com.amazon.tv.acr", "com.amazon.hybridadidservice"]
+    },
+    "alexa": {
+      "impact": "Disables Alexa, voice-assistant features, Alexa alerts and notifications. Keep this group off if you use Alexa.",
+      "packages": ["com.amazon.vizzini", "com.amazon.tv.alexanotifications", "com.amazon.tv.alexaalerts"]
+    }
+  }
+}

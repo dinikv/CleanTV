@@ -1,0 +1,24 @@
+# Local device data — never commit
+private/
+audits/
+backups/
+journals/
+*.log
+*.dump
+*.env
+.env*
+*.jks
+*.keystore
+*.pem
+*.key
+*.p12
+adbkey*
+# Build outputs
+__pycache__/
+*.pyc
+.venv/
+launcher/build/
+launcher/res/drawable-nodpi/wallpaper_*.jpg
+*.apk
+*.idsig
+.DS_Store
