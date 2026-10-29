@@ -2,9 +2,17 @@
 
 ## Begin here
 
-Read README.md, docs/COMPATIBILITY.md and docs/PRIVACY.md. The human's instructions determine the goal and authorized scope. Reuse answers already supplied; do not ask the same questions again.
+Read README.md, docs/SETUP.md, docs/COMPATIBILITY.md and docs/PRIVACY.md. The human's instructions determine the goal and authorized scope. Reuse answers already supplied; do not ask the same questions again.
 
 This is a local, device-specific workflow. Do not run cleanup merely because you are reviewing this repository. Get the intended ADB serial from the user or their already authorized device context. Never infer authorization for other devices on the network.
+
+## Prerequisites
+
+Detect the computer OS and architecture. Check the paths and versions of Python, ADB and optional Git before installing anything. Reuse suitable existing tools, including ADB supplied by an existing Android SDK. Cleanup requires Python 3.9+ and ADB; recommend a currently supported Python release for new installations. Git is optional with a repository ZIP. No third-party Python packages, API keys or GitHub authentication are needed.
+
+Use docs/SETUP.md. Explain the exact missing tools, trusted source, destination and any elevated permission requirements, then install within the user's authorized scope. Do not ask again for permission already granted. If administrator credentials or license acceptance require user interaction, leave those prompts to the human; never request credentials in chat.
+
+Prefer official vendor downloads or the user's already configured trusted package manager. Do not pipe downloaded scripts into a shell, disable TLS/signature verification, add untrusted package sources, replace system Python, install a new package manager silently, or run the cleanup CLI with sudo. Verify versions and executable paths after installation. Do not install JDK/Android Studio/full SDK unless the user wants to build the launcher. Prerequisite installation does not authorize package cleanup on a TV.
 
 ## Workflow
 

@@ -7,6 +7,7 @@
 
 <p align="center">
   <a href="#start-with-your-ai-assistant">Use with AI</a> ·
+  <a href="docs/SETUP.md">Install tools</a> ·
   <a href="#do-it-yourself">Quick start</a> ·
   <a href="docs/LAUNCHER.md">CleanTV launcher</a> ·
   <a href="wallpapers/README.md">Wallpapers</a> ·
@@ -39,7 +40,16 @@ Give this repository to an assistant that can run local commands, then paste:
 Help me use CleanTV on a TV I own:
 https://github.com/dinikv/CleanTV
 
-Read README.md and AGENTS.md first. Check my exact model and firmware.
+Read README.md, AGENTS.md and docs/SETUP.md first.
+Detect my computer OS and check Python, ADB and Git before installing.
+Reuse working installations. Install only missing tools using official
+vendor downloads or my existing trusted package manager; Git is optional
+if you download the repository ZIP. Explain the source and changes first,
+then proceed within my authorization. Let me handle any administrator
+or license prompts. Do not run unreviewed remote installer scripts,
+disable security checks, replace system Python, or install the full
+Android SDK unless I ask to build the launcher.
+Verify tool versions and paths, then check my TV's exact model and firmware.
 Start with a read-only audit. Ask which apps and features I want to keep
 only if I have not already told you. Explain the proposed changes and
 feature losses before applying them within my approved scope.
@@ -55,7 +65,17 @@ A chat-only assistant can guide you, but cannot connect to your TV itself. Never
 
 ## Do it yourself
 
-You need **Python 3.9+**, [Android Platform Tools](https://developer.android.com/tools/releases/platform-tools), and a TV that supports ADB. The cleanup CLI has no third-party Python dependencies. Use `python` instead of `python3` on Windows if needed.
+Install the small cleanup toolset first:
+
+| Tool | Needed for | Check |
+| --- | --- | --- |
+| Python 3.9+ (a currently supported release recommended) | Running CleanTV | `python3 --version` or `python --version` |
+| Android Platform Tools (`adb`) | Connecting to your TV | `adb version` |
+| Git, optional | Cloning and updating this repository | `git --version` |
+
+**[Easy installation steps for macOS, Windows and Linux →](docs/SETUP.md)**
+
+No `pip install`, API key, GitHub login, Android Studio or paid service is needed for cleanup. You also need a TV that supports ADB and a trusted local network. On Windows, use `python` instead of `python3` if that is the interpreter you verified. Launcher build tools are separate and optional.
 
 ### 1. Connect
 
@@ -67,6 +87,8 @@ cd CleanTV
 adb connect TV_IP:5555
 adb devices
 ```
+
+Without Git, use GitHub’s **Code → Download ZIP**, extract it, and open a terminal in the folder containing `README.md`; skip the clone command.
 
 Replace `TV_IP:5555` in every command with the exact device listed by `adb devices`. CleanTV never chooses a device automatically. Developer-menu labels vary by firmware.
 
