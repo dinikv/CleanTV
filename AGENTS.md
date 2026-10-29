@@ -17,8 +17,8 @@ Prefer official vendor downloads or the user's already configured trusted packag
 ## Workflow
 
 1. Inspect the code before executing it. Check `adb devices` and select the exact authorized device. Never scan a network for targets.
-2. Run a read-only audit into `private/`. Establish the exact model/build and which features the user uses. Package names alone do not prove spyware or microphone recording.
-3. Generate a plan only for supported firmware and explicitly chosen groups. Explain package purposes, evidence and feature losses. Do not invent broader compatibility or bypass the supported-build check to finish faster.
+2. Run a read-only audit into `private/`. Establish the exact model/build, detected platform and which features the user uses. Generic inventories support Android TV, Google TV and Fire TV; inventory entries are never a removal allowlist. Package names alone do not prove spyware or microphone recording.
+3. Use the optional Android 8.0+ launcher independently on TV platforms; default-home support varies by firmware. Generate a cleanup plan only for supported firmware and explicitly chosen groups. Explain package purposes, evidence and feature losses. Do not invent broader compatibility or bypass the supported-build check to finish faster.
 4. Apply only the reviewable plan within the human's authorization. The user's existing authorization may already cover it; otherwise get approval for the specific changes. `--yes` is a CLI acknowledgement, not a substitute for authorization.
 5. Preserve and inspect the journal. Stop on command rejection or state mismatch. Do not substitute `uninstall`, shared-UID restrictions, root, firmware exploits, component disablement or a different tool to bypass a rejection.
 6. Verify exact package state, remote navigation, Settings, networking and playback as appropriate. Distinguish a launch check from actual playback. Do not interrupt a movie unnecessarily. Report what was tested and what was not.

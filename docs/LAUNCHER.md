@@ -1,4 +1,7 @@
-# CleanTV launcher
+# Android TV, Google TV and Fire TV launcher
+
+Targets Android 8.0+ with a remote and landscape display. The same APK resolves installed provider variants across TV platforms. Home replacement depends on the firmware’s default-home controls; installing the APK alone does not guarantee Home-button takeover. See [compatibility](COMPATIBILITY.md) for validation status.
+
 
 An optional native Android launcher, separate from the cleanup CLI. Package: `org.cleantv.launcher`. Display name: **CleanTV**. This is an early source release.
 

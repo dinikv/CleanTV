@@ -2,7 +2,7 @@
 
 ## Three separate layers
 
-1. **The home screen.** The launcher changes what you see. It does not replace Fire OS.
+1. **The home screen.** The launcher changes what you see. It runs above Android TV, Google TV or Fire OS.
 2. **Settings and packages.** Privacy toggles and disabling selected components reduce some collection and features. CleanTV's CLI only changes reviewed package enabled states.
 3. **Network traffic.** A router/DNS filter can block identified destinations, but is not included here. A shared endpoint may handle both telemetry and essential playback or login. DNS cannot classify encrypted request contents or stop every route to a service.
 
@@ -20,7 +20,7 @@ The Alexa group disables the observed assistant and its alerts. It does not indi
 
 ## Data that stays local
 
-The audit queries an allowlisted set of packages, four privacy-setting values and model/build identity. A device serial is read to derive a SHA-256 identity hash; the raw serial is not saved. The hash is for mismatch prevention, not anonymization. Treat the entire audit and journal as private. There is no upload, account login or analytics service in the CLI.
+The audit records platform properties, installed package names and model/build identity. Reviewed firmware also receives detailed allowlisted package checks; Fire TV audits read four privacy-setting values. A device serial is read to derive a SHA-256 identity hash; the raw serial is not saved. The hash is for mismatch prevention, not anonymization. Treat the entire audit and journal as private. There is no upload, account login or analytics service in the CLI.
 
 The launcher has no Internet or microphone permission in this public build. It keeps app ordering, wallpaper selection and recommendation feedback in local Android preferences. Its streaming-app links hand control to the selected provider.
 

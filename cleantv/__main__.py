@@ -98,13 +98,38 @@ def safe_state(state):
             state.get("enabled") in (0, 1, 2, 3, 4))
 
 
+def detect_platform(properties, features):
+    """Classify TV families without using the result as cleanup authorization."""
+    manufacturer = properties.get("manufacturer", "").lower()
+    model = properties.get("model", "").upper()
+    if manufacturer == "amazon" or model.startswith("AFT"):
+        return "fire-tv"
+    if "android.software.leanback" in features or "android.hardware.type.television" in features:
+        return "android-tv"
+    return "unknown-android"
+
+
 def audit(adb):
     identity = adb.identity()
-    packages = {name: adb.package(name) for name in sorted(PACKAGES)}
-    privacy = {key: adb.shell("settings", "get", "secure", key) for key in PRIVACY_KEYS}
+    properties = {name: adb.shell("getprop", prop) for name, prop in {
+        "manufacturer": "ro.product.manufacturer", "brand": "ro.product.brand",
+        "model": "ro.product.model", "android_version": "ro.build.version.release",
+        "sdk": "ro.build.version.sdk"}.items()}
+    features = adb.shell("pm", "list", "features")
+    platform = detect_platform(properties, features)
+    # A generic inventory supports review on every vendor; never becomes an allowlist.
+    inventory = sorted(set(re.findall(r"^package:([A-Za-z0-9_.]+)$",
+                                     adb.shell("pm", "list", "packages"), re.M)))
+    supported = any(all(identity.get(k) == v for k, v in model.items())
+                    for model in PROFILE["tested"])
+    packages = {name: adb.package(name) for name in sorted(PACKAGES)} if supported else {}
+    privacy = ({key: adb.shell("settings", "get", "secure", key) for key in PRIVACY_KEYS}
+               if platform == "fire-tv" else {})
     return {"schema": 1, "kind": "audit", "created": stamp(), "device": identity,
-            "profile": PROFILE["id"], "packages": packages, "privacy": privacy,
-            "note": "Local snapshot. No network capture or claim of zero telemetry."}
+            "platform": platform, "properties": properties, "inventory": inventory,
+            "profile": PROFILE["id"] if supported else None,
+            "cleanup_supported": supported, "packages": packages, "privacy": privacy,
+            "note": "Local snapshot. Inventory is not a debloat list. No claim of zero telemetry."}
 
 
 def make_plan(report, groups):

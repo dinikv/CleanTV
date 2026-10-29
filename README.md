@@ -30,7 +30,9 @@ It also includes an optional **CleanTV launcher**: a quiet app dock, original-re
 | A restore journal | Restore each changed package to its previous enabled state. |
 | An AI handoff | Give your assistant the prompt below. The same rules live in `AGENTS.md`. |
 
-**Scope:** package changes are currently restricted to one tested configuration: **Fire TV AFTKRT / RS8185.3891N**. Other models and firmware can be audited, but the tool refuses to apply this profile. This is not a universal debloat list, a root tool, or a guarantee of zero telemetry.
+**Platforms:** the launcher targets Android 8.0+ TV devices, including Android TV, Google TV and Fire TV. The audit detects the TV family and inventories installed packages across vendors. Default-home selection depends on the device firmware. Hardware validation is still limited; see [compatibility](docs/COMPATIBILITY.md).
+
+**Cleanup scope:** package changes are currently restricted to one tested configuration: **Fire TV AFTKRT / RS8185.3891N**. Other models and firmware can be audited, but the tool refuses to apply this profile. This is not a universal debloat list, a root tool, or a guarantee of zero telemetry.
 
 ## Start with your AI assistant
 
@@ -90,9 +92,17 @@ adb devices
 
 Without Git, use GitHub’s **Code → Download ZIP**, extract it, and open a terminal in the folder containing `README.md`; skip the clone command.
 
-Replace `TV_IP:5555` in every command with the exact device listed by `adb devices`. CleanTV never chooses a device automatically. Developer-menu labels vary by firmware.
+Replace `TV_IP:5555` in every command with the exact device listed by `adb devices`. CleanTV never chooses a device automatically. Developer-menu labels vary by firmware. For TVs offering Wireless debugging pairing, use `adb pair TV_IP:PAIRING_PORT`, enter the code locally, then `adb connect TV_IP:DEBUG_PORT`. Pairing and connection ports may differ; use the values shown on the TV. Some TVs require USB debugging instead.
 
-### 2. Audit and plan
+### 2. Audit any Android TV
+
+The audit saves platform details and an installed-package inventory locally. Unsupported builds stop here for cleanup; you can still use the launcher.
+
+```sh
+python3 -m cleantv --serial TV_IP:5555 audit --out private/audit.json
+```
+
+### 3. Plan cleanup on reviewed firmware
 
 ```sh
 python3 -m cleantv --serial TV_IP:5555 audit --out private/audit.json
@@ -111,7 +121,7 @@ Read `private/plan.json` before proceeding. You can select these groups explicit
 
 Missing, already disabled, shared-UID and incompletely identified packages are skipped. Unknown firmware stops at the audit. Existing files are not overwritten; use new filenames for another audit or plan.
 
-### 3. Apply the reviewed plan
+### 4. Apply the reviewed plan
 
 ```sh
 python3 -m cleantv --serial TV_IP:5555 apply \
