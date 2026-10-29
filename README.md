@@ -139,7 +139,7 @@ The optional [CleanTV launcher](docs/LAUNCHER.md) includes:
 - Six favorite app tiles and a remote-friendly app grid.
 - Four bundled wallpapers, preserved at their original resolution and quality.
 - Wallpaper rotation every minute while the launcher is foreground.
-- An offline ambient screensaver and a local recommendation picker.
+- An offline ambient screensaver and a local recommendation picker that learns story themes from feedback, avoids recent repeats, and saves picks for later.
 
 The public build has **no Internet or microphone permission** and no hard-coded weather location. Opening a streaming app invokes that app, which has its own network behavior. “Pick for tonight” is a 12-title editorial snapshot, not a live streaming search engine.
 

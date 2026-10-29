@@ -40,7 +40,19 @@ The wallpaper rotates every 60 seconds while the launcher is foreground. Idle sc
 
 ## Pick for tonight
 
-A local 12-title editorial collection for Netflix, Prime Video and YouTube with mood, approximate runtime, original-language and format filters. English, Tamil and French rank ahead of other languages by default; preferences and feedback are adjustable and local.
+A local 12-title editorial collection for Netflix, Prime Video and YouTube with mood, approximate runtime, original-language and format filters. Only enabled services with installed apps are eligible. English, Tamil and French receive initial priority; preferred languages are adjustable.
+
+The local ranking engine learns story themes from explicit feedback, lowers recently shown titles, varies the order by day and mixes language/mood between alternatives when possible. It does not contact an AI service or read your streaming history.
+
+- **Balanced:** your preferences, recent suggestions and some daily variety.
+- **Easy evening:** excludes titles tagged intense and favors lighter, shorter options. This is not a parental-rating filter.
+- **Discovery:** boosts languages outside your preferred list while preserving explicit filters.
+- **French practice:** French content, with a beginner-focused lesson prioritized; other French titles may have advanced dialogue.
+- **Saved picks:** only titles you saved for another evening.
+
+Feedback distinguishes watched, loved, not-my-taste, more-like-this, save, and a 12-hour skip. A skip does not train a dislike. Undo reverses the last feedback in the current picker session. Reset taste feedback and clear suggestion history are separate controls. An empty result never silently relaxes filters; Browse all picks explicitly clears filters/mode while keeping your services and feedback.
+
+The ranking is transparent heuristics over editorial tags, not a model trained on your accounts. The 12-item catalogue remains the main limit on variety.
 
 Canadian listings were reviewed on 28 October 2026. They do not refresh automatically. Title availability, runtime, audio and subtitle options can change. Movie posters are not bundled in this public version; metadata source URLs remain in `res/raw/picks.json`.
 

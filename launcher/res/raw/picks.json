@@ -11,7 +11,14 @@
     "package": "com.netflix.ninja",
     "source": "https://www.justwatch.com/ca/movie/connected-2020",
     "art": "",
-    "why": "A chaotic family road trip meets a robot uprising. A lively, funny choice when you want something upbeat."
+    "why": "A chaotic family road trip meets a robot uprising. A lively, funny choice when you want something upbeat.",
+    "tags": [
+      "animation",
+      "family stories",
+      "comedy"
+    ],
+    "intense": false,
+    "beginner": false
   },
   {
     "id": "glass",
@@ -25,7 +32,14 @@
     "package": "com.netflix.ninja",
     "source": "https://www.justwatch.com/ca/movie/knives-out-2",
     "art": "",
-    "why": "A sunlit island mystery full of suspicious guests. A playful puzzle for an evening with time to settle in."
+    "why": "A sunlit island mystery full of suspicious guests. A playful puzzle for an evening with time to settle in.",
+    "tags": [
+      "mysteries",
+      "comedy",
+      "ensemble stories"
+    ],
+    "intense": false,
+    "beginner": false
   },
   {
     "id": "sea",
@@ -39,7 +53,14 @@
     "package": "com.netflix.ninja",
     "source": "https://www.justwatch.com/ca/movie/the-sea-beast",
     "art": "",
-    "why": "A young stowaway challenges a legendary monster hunter. Big ocean adventure with a warm heart."
+    "why": "A young stowaway challenges a legendary monster hunter. Big ocean adventure with a warm heart.",
+    "tags": [
+      "animation",
+      "adventure",
+      "friendship"
+    ],
+    "intense": false,
+    "beginner": false
   },
   {
     "id": "henry",
@@ -53,7 +74,14 @@
     "package": "com.netflix.ninja",
     "source": "https://www.justwatch.com/ca/movie/untitled-wes-anderson-roald-dahl-film",
     "art": "",
-    "why": "A compact, theatrical Roald Dahl tale. A good choice when you want a complete story without a long evening."
+    "why": "A compact, theatrical Roald Dahl tale. A good choice when you want a complete story without a long evening.",
+    "tags": [
+      "short stories",
+      "comedy",
+      "imaginative stories"
+    ],
+    "intense": false,
+    "beginner": false
   },
   {
     "id": "meiy",
@@ -67,7 +95,14 @@
     "package": "com.netflix.ninja",
     "source": "https://www.justwatch.com/ca/movie/meiyazhagan",
     "art": "",
-    "why": "A homecoming and an unexpected connection. An unhurried Tamil story for an evening when you want warmth."
+    "why": "A homecoming and an unexpected connection. An unhurried Tamil story for an evening when you want warmth.",
+    "tags": [
+      "friendship",
+      "homecomings",
+      "character-led stories"
+    ],
+    "intense": false,
+    "beginner": false
   },
   {
     "id": "maha",
@@ -81,7 +116,14 @@
     "package": "com.netflix.ninja",
     "source": "https://www.justwatch.com/ca/movie/maharaja-2024",
     "art": "",
-    "why": "A tightly wound Tamil mystery with a dark turn. Contains intense violence and sexual violence."
+    "why": "A tightly wound Tamil mystery with a dark turn. Contains intense violence and sexual violence.",
+    "tags": [
+      "mysteries",
+      "dark suspense",
+      "revenge stories"
+    ],
+    "intense": true,
+    "beginner": false
   },
   {
     "id": "minnal",
@@ -95,7 +137,14 @@
     "package": "com.netflix.ninja",
     "source": "https://www.justwatch.com/ca/movie/minnal-murali",
     "art": "",
-    "why": "Small-town life meets superhero powers. A Malayalam discovery with humour, heart and spectacle."
+    "why": "Small-town life meets superhero powers. A Malayalam discovery with humour, heart and spectacle.",
+    "tags": [
+      "superheroes",
+      "comedy",
+      "small-town stories"
+    ],
+    "intense": false,
+    "beginner": false
   },
   {
     "id": "body",
@@ -109,7 +158,14 @@
     "package": "com.netflix.ninja",
     "source": "https://www.justwatch.com/ca/movie/i-lost-my-body",
     "art": "",
-    "why": "An unusual, moving animated story of memory and connection. Original French audio; use French subtitles in Netflix for practice. Not a beginner lesson."
+    "why": "An unusual, moving animated story of memory and connection. Original French audio; use French subtitles in Netflix for practice. Not a beginner lesson.",
+    "tags": [
+      "animation",
+      "character-led stories",
+      "imaginative stories"
+    ],
+    "intense": false,
+    "beginner": false
   },
   {
     "id": "forgotten",
@@ -123,7 +179,14 @@
     "package": "com.netflix.ninja",
     "source": "https://www.justwatch.com/ca/movie/forgotten",
     "art": "",
-    "why": "A brother returns home changed. A Korean mystery for when you want suspense and surprises."
+    "why": "A brother returns home changed. A Korean mystery for when you want suspense and surprises.",
+    "tags": [
+      "mysteries",
+      "dark suspense",
+      "family stories"
+    ],
+    "intense": true,
+    "beginner": false
   },
   {
     "id": "map",
@@ -137,7 +200,14 @@
     "package": "com.amazon.firebat",
     "source": "https://www.justwatch.com/ca/movie/the-map-of-tiny-perfect-things",
     "art": "",
-    "why": "Two teenagers find small wonders in a repeating day. A gentle, imaginative evening watch."
+    "why": "Two teenagers find small wonders in a repeating day. A gentle, imaginative evening watch.",
+    "tags": [
+      "time-loop stories",
+      "friendship",
+      "romance"
+    ],
+    "intense": false,
+    "beginner": false
   },
   {
     "id": "frenchvideo",
@@ -151,7 +221,13 @@
     "package": "com.amazon.firetv.youtube",
     "source": "https://www.easy-languages.org/easy-french",
     "art": "",
-    "why": "A beginner-focused French video from Easy Languages. Choose this for a small language-learning break; duration is not verified."
+    "why": "A beginner-focused French video from Easy Languages. Choose this for a small language-learning break; duration is not verified.",
+    "tags": [
+      "language lessons",
+      "short videos"
+    ],
+    "intense": false,
+    "beginner": true
   },
   {
     "id": "lupin",
@@ -165,6 +241,13 @@
     "package": "com.netflix.ninja",
     "source": "https://www.justwatch.com/ca/tv-show/lupin",
     "art": "",
-    "why": "A stylish French heist series about a gentleman thief and a family injustice. Natural French dialogue for listening practice; choose subtitles in Netflix. Episode lengths vary."
+    "why": "A stylish French heist series about a gentleman thief and a family injustice. Natural French dialogue for listening practice; choose subtitles in Netflix. Episode lengths vary.",
+    "tags": [
+      "heists",
+      "mysteries",
+      "family stories"
+    ],
+    "intense": false,
+    "beginner": false
   }
 ]
